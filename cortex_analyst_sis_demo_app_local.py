@@ -19,6 +19,9 @@ from snowflake.snowpark.exceptions import SnowparkSQLException
 # 使用可能なセマンティックモデルパスのリスト（形式: <DATABASE>.<SCHEMA>.<STAGE>/<FILE-NAME>）
 # 各パスはセマンティックモデルを定義するYAMLファイルを指します
 AVAILABLE_SEMANTIC_MODELS_PATHS = [
+# Replace variables with your environment.
+# File created by semantic-model-generator-main-local
+# example "CORTEX_ANALYST_LOCAL.cortex_analyst.RAW_DATA/[your_semantic_model_file_1.yaml"
     "[YOUR_DATABASE].cortex_analyst.RAW_DATA/[your_semantic_model_file_1.yaml",
     "[YOUR_DATABASE].cortex_analyst.RAW_DATA/[your_semantic_model_file_2.yaml"    
 ]
