@@ -1,5 +1,5 @@
 """
-Cortex Analyst App (日本語対応版)
+Cortex Analyst App 
 ====================
 このアプリケーションは、自然言語を使用してデータと対話することができます。
 """
@@ -19,7 +19,8 @@ from snowflake.snowpark.exceptions import SnowparkSQLException
 # 使用可能なセマンティックモデルパスのリスト（形式: <DATABASE>.<SCHEMA>.<STAGE>/<FILE-NAME>）
 # 各パスはセマンティックモデルを定義するYAMLファイルを指します
 AVAILABLE_SEMANTIC_MODELS_PATHS = [
-    "madb_cotex.REVENUE_TIMESERIES.RAW_DATA/semantic_model_PREPPER_OPEN_DATA_BANK__JAPANESE_PREFECTURE_DATA.yaml"
+    "[YOUR_DATABASE].cortex_analyst.RAW_DATA/[your_semantic_model_file_1.yaml",
+    "[YOUR_DATABASE].cortex_analyst.RAW_DATA/[your_semantic_model_file_2.yaml"    
 ]
 API_ENDPOINT = "/api/v2/cortex/analyst/message"
 API_TIMEOUT = 500000  # ミリ秒単位（10倍に拡大）
@@ -154,7 +155,7 @@ def reset_session_state():
 def show_header_and_sidebar():
     """アプリのヘッダーとサイドバーを表示"""
     # アプリのタイトルと紹介文を設定
-    st.title("Cortex Analyst（日本語対応版）")
+    st.title("Cortex Analyst")
     st.markdown(
         "Cortex Analystへようこそ！下記にご質問を入力して、データと対話してください。"
     )
